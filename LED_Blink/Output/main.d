@@ -8,3 +8,4 @@
 .\output\main.o: .\CMSIS\stm32f10x.h
 .\output\main.o: .\FWlib\inc\stm32f10x_rcc.h
 .\output\main.o: .\FWlib\inc\misc.h
+.\output\main.o: USER\led.h

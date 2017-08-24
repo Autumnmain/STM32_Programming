@@ -1,0 +1,17 @@
+LED11 ~ LED18:
+	Pull down
+	LED -- 74HC245 -- Connector (J12)
+	74HC245: bus tranceiver, bidirection
+		PIN 1 (DIR) control the signal direction: 1 A -> B; 0 B -> A
+			PIN 1 -- J21 -- VCC / P10 -- PA0
+
+LED1 ~ LED8:
+	Pull up
+	LED -- JP1
+
+LED9 ~ LED10:
+	Pull up
+	LED -- J22
+
+JP10: PB8 ~ PB15
+JP11: PB0 ~ PB7
