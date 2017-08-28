@@ -15,3 +15,9 @@ LED9 ~ LED10:
 
 JP10: PB8 ~ PB15
 JP11: PB0 ~ PB7
+
+K1 ~ k8:
+	Pull down
+	Key -- JP5
+	
+	k5 -- Exti

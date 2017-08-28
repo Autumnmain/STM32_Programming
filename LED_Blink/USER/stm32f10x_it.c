@@ -164,4 +164,14 @@ void SysTick_Handler(void)
   * @}
   */
 
+void EXTI9_5_IRQHandler(void)
+{
+	extern int delay_time;
+	if(EXTI_GetITStatus(EXTI_Line5) != RESET)
+	{
+		delay_time +=100;
+		EXTI_ClearITPendingBit(EXTI_Line5);
+	}
+}
+
 /******************* (C) COPYRIGHT 2011 STMicroelectronics *****END OF FILE****/

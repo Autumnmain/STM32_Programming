@@ -4,7 +4,8 @@
 .\output\system_stm32f10x.o: D:\Program files\KeilV5.20\ARM\ARMCC\Bin\..\include\stdint.h
 .\output\system_stm32f10x.o: CMSIS\system_stm32f10x.h
 .\output\system_stm32f10x.o: .\USER\stm32f10x_conf.h
-.\output\system_stm32f10x.o: .\FWlib\inc\stm32f10x_gpio.h
+.\output\system_stm32f10x.o: .\FWlib\inc\stm32f10x_exti.h
 .\output\system_stm32f10x.o: .\CMSIS\stm32f10x.h
+.\output\system_stm32f10x.o: .\FWlib\inc\stm32f10x_gpio.h
 .\output\system_stm32f10x.o: .\FWlib\inc\stm32f10x_rcc.h
 .\output\system_stm32f10x.o: .\FWlib\inc\misc.h

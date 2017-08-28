@@ -14,7 +14,7 @@ void LED_GPIO_Config(void)
 	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_OD;
 	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
 	GPIO_Init(GPIOB, &GPIO_InitStructure);
-	GPIO_ResetBits(GPIOB, GPIO_InitStructure.GPIO_Pin);
+	GPIO_SetBits(GPIOB, GPIO_InitStructure.GPIO_Pin);
 }
 
 void Key_GPIO_Config(void)
@@ -27,8 +27,8 @@ void Key_GPIO_Config(void)
 	
 	/* Set GPIOB pin0 ~ pin7 as input mode */
 	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IPU;
-	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_0 | GPIO_Pin_1 | GPIO_Pin_2 | GPIO_Pin_3 | GPIO_Pin_4 | \
-	 GPIO_Pin_5 |  GPIO_Pin_6 | GPIO_Pin_7;
+	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_0 | GPIO_Pin_1 | GPIO_Pin_2 | GPIO_Pin_3 |\
+	 GPIO_Pin_4 |  GPIO_Pin_6 | GPIO_Pin_7;
 	GPIO_Init(GPIOB, &GPIO_InitStructure);
 }
 
