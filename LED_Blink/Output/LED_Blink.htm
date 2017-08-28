@@ -3,11 +3,11 @@
 <title>Static Call Graph - [.\Output\LED_Blink.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Output\LED_Blink.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060183: Last Updated: Mon Aug 28 23:26:14 2017
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060183: Last Updated: Mon Aug 28 23:42:29 2017
 <BR><P>
 <H3>Maximum Stack Usage =         40 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
-__rt_entry_main &rArr; main &rArr; EXTI_PB5_Config &rArr; NVIC_Configuration &rArr; NVIC_Init
+__rt_entry_main &rArr; main &rArr; EXTI_PB56_Config &rArr; NVIC_Configuration &rArr; NVIC_Init
 <P>
 <H3>
 Functions with no stack information
@@ -195,7 +195,7 @@ Global Symbols
 
 <P><STRONG><a name="[43]"></a>__rt_entry_main</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry2.o(.ARM.Collect$$rtentry$$0000000D))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40 + Unknown Stack Size
-<LI>Call Chain = __rt_entry_main &rArr; main &rArr; EXTI_PB5_Config &rArr; NVIC_Configuration &rArr; NVIC_Init
+<LI>Call Chain = __rt_entry_main &rArr; main &rArr; EXTI_PB56_Config &rArr; NVIC_Configuration &rArr; NVIC_Init
 </UL>
 <BR>[Calls]<UL><LI><a href="#[44]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 <LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;exit
@@ -403,7 +403,7 @@ Global Symbols
 <P><STRONG><a name="[a]"></a>DebugMon_Handler</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, stm32f10x_it.o(i.DebugMon_Handler))
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_md.o(RESET)
 </UL>
-<P><STRONG><a name="[24]"></a>EXTI9_5_IRQHandler</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, stm32f10x_it.o(i.EXTI9_5_IRQHandler))
+<P><STRONG><a name="[24]"></a>EXTI9_5_IRQHandler</STRONG> (Thumb, 64 bytes, Stack size 8 bytes, stm32f10x_it.o(i.EXTI9_5_IRQHandler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = EXTI9_5_IRQHandler
 </UL>
 <BR>[Calls]<UL><LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI_GetITStatus
@@ -420,11 +420,11 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[54]"></a>EXTI_Init</STRONG> (Thumb, 142 bytes, Stack size 0 bytes, stm32f10x_exti.o(i.EXTI_Init))
-<BR><BR>[Called By]<UL><LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI_PB5_Config
+<BR><BR>[Called By]<UL><LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI_PB56_Config
 </UL>
 
-<P><STRONG><a name="[4f]"></a>EXTI_PB5_Config</STRONG> (Thumb, 72 bytes, Stack size 16 bytes, exti.o(i.EXTI_PB5_Config))
-<BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = EXTI_PB5_Config &rArr; NVIC_Configuration &rArr; NVIC_Init
+<P><STRONG><a name="[4f]"></a>EXTI_PB56_Config</STRONG> (Thumb, 80 bytes, Stack size 16 bytes, exti.o(i.EXTI_PB56_Config))
+<BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = EXTI_PB56_Config &rArr; NVIC_Configuration &rArr; NVIC_Init
 </UL>
 <BR>[Calls]<UL><LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_EXTILineConfig
 <LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI_Init
@@ -438,7 +438,7 @@ Global Symbols
 <P><STRONG><a name="[53]"></a>GPIO_EXTILineConfig</STRONG> (Thumb, 60 bytes, Stack size 12 bytes, stm32f10x_gpio.o(i.GPIO_EXTILineConfig))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = GPIO_EXTILineConfig
 </UL>
-<BR>[Called By]<UL><LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI_PB5_Config
+<BR>[Called By]<UL><LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI_PB56_Config
 </UL>
 
 <P><STRONG><a name="[52]"></a>GPIO_Init</STRONG> (Thumb, 278 bytes, Stack size 24 bytes, stm32f10x_gpio.o(i.GPIO_Init))
@@ -446,7 +446,7 @@ Global Symbols
 </UL>
 <BR>[Called By]<UL><LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_GPIO_Config
 <LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Key_GPIO_Config
-<LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI_PB5_Config
+<LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI_PB56_Config
 </UL>
 
 <P><STRONG><a name="[57]"></a>GPIO_ReadInputDataBit</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, stm32f10x_gpio.o(i.GPIO_ReadInputDataBit))
@@ -515,7 +515,7 @@ Global Symbols
 <P><STRONG><a name="[50]"></a>RCC_APB2PeriphClockCmd</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, stm32f10x_rcc.o(i.RCC_APB2PeriphClockCmd))
 <BR><BR>[Called By]<UL><LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_GPIO_Config
 <LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Key_GPIO_Config
-<LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI_PB5_Config
+<LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI_PB56_Config
 </UL>
 
 <P><STRONG><a name="[9]"></a>SVC_Handler</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, stm32f10x_it.o(i.SVC_Handler))
@@ -539,15 +539,15 @@ Global Symbols
 <LI><a href="#[44]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[44]"></a>main</STRONG> (Thumb, 646 bytes, Stack size 0 bytes, main.o(i.main))
-<BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = main &rArr; EXTI_PB5_Config &rArr; NVIC_Configuration &rArr; NVIC_Init
+<P><STRONG><a name="[44]"></a>main</STRONG> (Thumb, 582 bytes, Stack size 0 bytes, main.o(i.main))
+<BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = main &rArr; EXTI_PB56_Config &rArr; NVIC_Configuration &rArr; NVIC_Init
 </UL>
 <BR>[Calls]<UL><LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_GPIO_Config
 <LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Key_Scan
 <LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Key_GPIO_Config
 <LI><a href="#[5a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_SetBits
 <LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_ResetBits
-<LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI_PB5_Config
+<LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI_PB56_Config
 <LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay
 </UL>
 <BR>[Called By]<UL><LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_entry_main
@@ -562,7 +562,7 @@ Local Symbols
 <BR>[Calls]<UL><LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NVIC_PriorityGroupConfig
 <LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NVIC_Init
 </UL>
-<BR>[Called By]<UL><LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI_PB5_Config
+<BR>[Called By]<UL><LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI_PB56_Config
 </UL>
 
 <P><STRONG><a name="[5d]"></a>SetSysClock</STRONG> (Thumb, 8 bytes, Stack size 8 bytes, system_stm32f10x.o(i.SetSysClock))

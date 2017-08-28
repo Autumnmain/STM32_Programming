@@ -172,6 +172,13 @@ void EXTI9_5_IRQHandler(void)
 		delay_time +=100;
 		EXTI_ClearITPendingBit(EXTI_Line5);
 	}
+	if(EXTI_GetITStatus(EXTI_Line6) != RESET)
+	{
+		delay_time -=100;
+		if(delay_time<=0)
+			delay_time = 10;
+		EXTI_ClearITPendingBit(EXTI_Line6);
+	}
 }
 
 /******************* (C) COPYRIGHT 2011 STMicroelectronics *****END OF FILE****/

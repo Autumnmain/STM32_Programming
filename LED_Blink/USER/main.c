@@ -7,7 +7,7 @@ int main(void)
 	u32 c=11;
 	LED_GPIO_Config();
 	Key_GPIO_Config();
-	EXTI_PB5_Config();
+	EXTI_PB56_Config();
 	while(1)
 	{
 		if(Key_Scan(GPIOB, GPIO_Pin_0))
@@ -62,14 +62,14 @@ int main(void)
 				delay(delay_time);
 				if(Key_Scan(GPIOB, GPIO_Pin_7))
 					break;
-				//if(Key_Scan(GPIOB, GPIO_Pin_5))
-					//delay_time += 100;
+				/*if(Key_Scan(GPIOB, GPIO_Pin_5))
+					delay_time += 100;
 				if(Key_Scan(GPIOB, GPIO_Pin_6))
 				{
 					delay_time -= 100;
 					if(delay_time < 100)
 						delay_time = 100;
-				}
+				}*/
 			}
 		if(Key_Scan(GPIOB, GPIO_Pin_1))
 			while(1)
@@ -125,14 +125,14 @@ int main(void)
 				if(Key_Scan(GPIOB, GPIO_Pin_7))
 					break;
 				
-				//if(Key_Scan(GPIOB, GPIO_Pin_5))
-					//delay_time += 100;
+				/*if(Key_Scan(GPIOB, GPIO_Pin_5))
+					delay_time += 100;
 				if(Key_Scan(GPIOB, GPIO_Pin_6))
 				{
 					delay_time -= 100;
 					if(delay_time < 100)
 						delay_time = 100;
-				}
+				}*/
 			}
 	}
 }
