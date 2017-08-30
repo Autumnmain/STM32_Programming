@@ -21,3 +21,8 @@ K1 ~ k8:
 	Key -- JP5
 	
 	k5 -- Exti
+	
+
+USART1:
+	PA9 -- USART1_TX
+	PA10-- USART1_RX

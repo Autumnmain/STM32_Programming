@@ -8,9 +8,16 @@ int main(void)
 	LED_GPIO_Config();
 	Key_GPIO_Config();
 	EXTI_PB56_Config();
+	USART1_Config();
+	delay(1);
+	
 	while(1)
 	{
-		if(Key_Scan(GPIOB, GPIO_Pin_0))
+		if(Key_Scan(GPIOB, GPIO_Pin_0))\
+		{
+			printf("\r\n this is a printf demo \r\n");
+			//USART_SendData(USART1, 'A');
+			//while(USART_GetFlagStatus(USART1, USART_FLAG_TC) != SET);
 			while(1)
 			{
 				if(c & 0x80)
@@ -71,6 +78,7 @@ int main(void)
 						delay_time = 100;
 				}*/
 			}
+		}
 		if(Key_Scan(GPIOB, GPIO_Pin_1))
 			while(1)
 			{

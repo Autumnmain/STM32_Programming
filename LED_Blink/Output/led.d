@@ -9,7 +9,10 @@
 .\output\led.o: .\CMSIS\stm32f10x.h
 .\output\led.o: .\FWlib\inc\stm32f10x_gpio.h
 .\output\led.o: .\FWlib\inc\stm32f10x_rcc.h
+.\output\led.o: .\FWlib\inc\stm32f10x_usart.h
 .\output\led.o: .\FWlib\inc\misc.h
 .\output\led.o: USER\main.h
 .\output\led.o: USER\led.h
 .\output\led.o: USER\exti.h
+.\output\led.o: USER\usart1.h
+.\output\led.o: D:\Program files\KeilV5.20\ARM\ARMCC\Bin\..\include\stdio.h
