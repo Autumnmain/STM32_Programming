@@ -13,5 +13,6 @@
 #include "stm32f10x.h"
 #include "stdio.h"
 void USART1_Config(void);
+static char *itoa (int value, char *string, int radix);
 
 #endif /* __USART1_H */

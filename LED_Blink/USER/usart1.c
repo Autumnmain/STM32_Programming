@@ -40,3 +40,78 @@ int fputc(int ch, FILE *f)
 	return ch;
 }
 
+/**
+	* @brief	Change the data type from int to char
+	* @author	Xiang Li
+	*	@param	-value, the value, which will be transformed to char
+	*	@param	-string, the char pointer
+	* @param	-radix, = 10, means decimal
+	*
+	*	@retval	
+	*/
+static char *itoa (int value, char *string, int radix)
+{
+	int d;
+	int flag = 0;
+	char *ptr = string;
+	
+	/* This implementation only works for decimal numbers */
+	if(radix != 10)
+	{
+		*ptr = 0;
+		return string;
+	}
+	
+	if(!value)
+	{
+		*(ptr++) = 0x30;
+		*ptr = 0;
+		return string;
+	}
+	
+	/* Implementation for negative values */
+	if (value < 0)
+	{
+		*(ptr++) = '-';
+		value *= -1;
+	}
+	
+	d = value/10000;
+	if (d || flag)
+	{
+		*(ptr++) = d + 0x30;
+		flag = 1;
+		value -= d*10000;
+	}
+	d = value/1000;
+	if (d || flag)
+	{
+		*(ptr++) = d + 0x30;
+		flag = 1;
+		value -= d*1000;
+	}
+	d = value/100;
+	if (d || flag)
+	{
+		*(ptr++) = d + 0x30;
+		flag = 1;
+		value -= d*100;
+	}
+	d = value/10;
+	if (d || flag)
+	{
+		*(ptr++) = d + 0x30;
+		flag = 1;
+		value -= d*10;
+	}
+	d = value;
+	if (d || flag)
+	{
+		*(ptr++) = d + 0x30;
+		flag = 1;
+	}
+	
+	*ptr = 0;
+	return string;
+}
+
