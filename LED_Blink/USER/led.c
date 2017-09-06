@@ -6,7 +6,7 @@ void LED_GPIO_Config(void)
 	GPIO_InitTypeDef GPIO_InitStructure;
 	
 	/* Enable clock for peripheral GPIOB */
-	RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOB, ENABLE);
+	RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOB | RCC_APB2Periph_GPIOA, ENABLE);
 	
 	/* Set GPIOB as output pull down pull up 50MHz */
 	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_8 | GPIO_Pin_9 | GPIO_Pin_10 | GPIO_Pin_11 | \
@@ -15,6 +15,10 @@ void LED_GPIO_Config(void)
 	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
 	GPIO_Init(GPIOB, &GPIO_InitStructure);
 	GPIO_SetBits(GPIOB, GPIO_InitStructure.GPIO_Pin);
+	
+	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_0;
+	GPIO_Init(GPIOA, &GPIO_InitStructure);
+	GPIO_SetBits(GPIOA, GPIO_InitStructure.GPIO_Pin);
 }
 
 void Key_GPIO_Config(void)

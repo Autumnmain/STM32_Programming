@@ -5,6 +5,7 @@
 #include "led.h"
 #include "exti.h"
 #include "usart1.h"
+#include "dma.h"
 
 void delay(int);
 

@@ -1,16 +1,24 @@
 #include "main.h"
 
 int delay_time = 500;
+extern uint8_t SendBuff[SENDBUFF_SIZE];
 
 int main(void)
 {
 	u32 c=11;
+	u32 i;
 	LED_GPIO_Config();
 	Key_GPIO_Config();
 	EXTI_PB56_Config();
 	USART1_Config();
+	DMA_Config();
 	delay(1);
 	
+	for(i=0; i<SENDBUFF_SIZE; i++)
+	{
+		SendBuff[i] = 0xff;
+	}
+	USART_DMACmd(USART1, USART_DMAReq_Tx, ENABLE);
 	while(1)
 	{
 		if(Key_Scan(GPIOB, GPIO_Pin_0))\

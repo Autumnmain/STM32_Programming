@@ -23,6 +23,8 @@
 
 /* Includes ------------------------------------------------------------------*/
 #include "stm32f10x_it.h"
+/* -----------Private------------------- */
+#include "led.h"
 
 /** @addtogroup STM32F10x_StdPeriph_Examples
   * @{
@@ -178,6 +180,20 @@ void EXTI9_5_IRQHandler(void)
 		if(delay_time<=0)
 			delay_time = 10;
 		EXTI_ClearITPendingBit(EXTI_Line6);
+	}
+}
+
+/**
+	* @brief 	This function handles the dma1 interrupt
+	* @author Xiang Li
+	* @date		2017.09.06
+	*/
+void DMA1_Channel4_IRQHandler(void)
+{
+	if(DMA_GetFlagStatus(DMA1_FLAG_TC4) != RESET)
+	{
+		LED_ON(GPIOA, GPIO_Pin_0);
+		DMA_ClearFlag(DMA1_FLAG_TC4);
 	}
 }
 
