@@ -2,16 +2,20 @@
 
 int delay_time = 500;
 extern uint8_t SendBuff[SENDBUFF_SIZE];
+extern __IO uint16_t ADC_ConvertedValue;
 
 int main(void)
 {
 	u32 c=11;
 	u32 i;
+	float ADC_ConvertedValueLocal;
+	float ResistorVal;
 	LED_GPIO_Config();
 	Key_GPIO_Config();
 	EXTI_PB56_Config();
 	USART1_Config();
 	DMA_Config();
+	ADC1_Volt_Init();
 	delay(1);
 	
 	for(i=0; i<SENDBUFF_SIZE; i++)
@@ -21,6 +25,11 @@ int main(void)
 	USART_DMACmd(USART1, USART_DMAReq_Tx, ENABLE);
 	while(1)
 	{
+		delay(10);
+		ADC_ConvertedValueLocal = (float) ADC_ConvertedValue/4096*3.3;
+		ResistorVal = 3.3/ADC_ConvertedValueLocal*10 - 10;
+		printf("Voltage = %f V \r\n", ADC_ConvertedValueLocal);
+		printf("Resistor = %f K \r\n", ResistorVal);
 		if(Key_Scan(GPIOB, GPIO_Pin_0))\
 		{
 			printf("\r\n this is a printf demo \r\n");

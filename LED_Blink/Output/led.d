@@ -5,8 +5,9 @@
 .\output\led.o: D:\Program files\KeilV5.20\ARM\ARMCC\Bin\..\include\stdint.h
 .\output\led.o: .\CMSIS\system_stm32f10x.h
 .\output\led.o: .\USER\stm32f10x_conf.h
-.\output\led.o: .\FWlib\inc\stm32f10x_dma.h
+.\output\led.o: .\FWlib\inc\stm32f10x_adc.h
 .\output\led.o: .\CMSIS\stm32f10x.h
+.\output\led.o: .\FWlib\inc\stm32f10x_dma.h
 .\output\led.o: .\FWlib\inc\stm32f10x_exti.h
 .\output\led.o: .\FWlib\inc\stm32f10x_gpio.h
 .\output\led.o: .\FWlib\inc\stm32f10x_rcc.h
@@ -18,3 +19,4 @@
 .\output\led.o: USER\usart1.h
 .\output\led.o: D:\Program files\KeilV5.20\ARM\ARMCC\Bin\..\include\stdio.h
 .\output\led.o: USER\dma.h
+.\output\led.o: USER\adc_volt.h

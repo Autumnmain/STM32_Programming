@@ -451,6 +451,16 @@
               <FileType>1</FileType>
               <FilePath>.\USER\dma.c</FilePath>
             </File>
+            <File>
+              <FileName>adc_temp.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\USER\adc_temp.c</FilePath>
+            </File>
+            <File>
+              <FileName>adc_volt.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\USER\adc_volt.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

@@ -6,6 +6,7 @@
 #include "exti.h"
 #include "usart1.h"
 #include "dma.h"
+#include "adc_volt.h"
 
 void delay(int);
 

@@ -5,6 +5,8 @@
 ".\output\exti.o"
 ".\output\usart1.o"
 ".\output\dma.o"
+".\output\adc_temp.o"
+".\output\adc_volt.o"
 ".\output\startup_stm32f10x_md.o"
 ".\output\misc.o"
 ".\output\stm32f10x_adc.o"
