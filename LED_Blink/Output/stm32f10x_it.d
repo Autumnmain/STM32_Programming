@@ -21,3 +21,4 @@
 .\output\stm32f10x_it.o: D:\Program files\KeilV5.20\ARM\ARMCC\Bin\..\include\stdio.h
 .\output\stm32f10x_it.o: USER\dma.h
 .\output\stm32f10x_it.o: USER\adc_volt.h
+.\output\stm32f10x_it.o: USER\MySysTick.h

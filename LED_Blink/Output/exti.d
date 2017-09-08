@@ -21,3 +21,4 @@
 .\output\exti.o: D:\Program files\KeilV5.20\ARM\ARMCC\Bin\..\include\stdio.h
 .\output\exti.o: USER\dma.h
 .\output\exti.o: USER\adc_volt.h
+.\output\exti.o: USER\MySysTick.h

@@ -25,6 +25,7 @@
 #include "stm32f10x_it.h"
 /* -----------Private------------------- */
 #include "led.h"
+#include "MySysTick.h"
 
 /** @addtogroup STM32F10x_StdPeriph_Examples
   * @{
@@ -140,6 +141,7 @@ void PendSV_Handler(void)
   */
 void SysTick_Handler(void)
 {
+	TimingDelay_Decrement();
 }
 
 /******************************************************************************/

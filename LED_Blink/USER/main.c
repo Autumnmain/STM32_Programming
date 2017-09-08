@@ -16,6 +16,7 @@ int main(void)
 	USART1_Config();
 	DMA_Config();
 	ADC1_Volt_Init();
+	SysTick_Init();
 	delay(1);
 	
 	for(i=0; i<SENDBUFF_SIZE; i++)
@@ -25,7 +26,7 @@ int main(void)
 	USART_DMACmd(USART1, USART_DMAReq_Tx, ENABLE);
 	while(1)
 	{
-		delay(10);
+		Delay_ms(1000);
 		ADC_ConvertedValueLocal = (float) ADC_ConvertedValue/4096*3.3;
 		ResistorVal = 3.3/ADC_ConvertedValueLocal*10 - 10;
 		printf("Voltage = %f V \r\n", ADC_ConvertedValueLocal);
