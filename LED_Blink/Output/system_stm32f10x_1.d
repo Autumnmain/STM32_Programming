@@ -10,5 +10,6 @@
 .\output\system_stm32f10x_1.o: .\FWlib\inc\stm32f10x_exti.h
 .\output\system_stm32f10x_1.o: .\FWlib\inc\stm32f10x_gpio.h
 .\output\system_stm32f10x_1.o: .\FWlib\inc\stm32f10x_rcc.h
+.\output\system_stm32f10x_1.o: .\FWlib\inc\stm32f10x_tim.h
 .\output\system_stm32f10x_1.o: .\FWlib\inc\stm32f10x_usart.h
 .\output\system_stm32f10x_1.o: .\FWlib\inc\misc.h

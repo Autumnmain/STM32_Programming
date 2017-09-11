@@ -165,8 +165,46 @@ void SysTick_Handler(void)
   */
 
 /**
-  * @}
+  * @brief Interrupt program
+	*	@author Xiang Li
   */
+void EXTI0_IRQHandler(void)
+{
+	extern u8 uClockW;
+	extern u8 uAntClockW;
+	if(EXTI_GetITStatus(EXTI_Line0) != RESET)
+	{
+		if(uClockW == 0)
+		{
+			uClockW = 1;
+			uAntClockW = 0;
+		}
+		else
+		{
+			uClockW = 0;
+		}
+		EXTI_ClearITPendingBit(EXTI_Line0);
+	}
+}
+
+void EXTI1_IRQHandler(void)
+{
+	extern u8 uClockW;
+	extern u8 uAntClockW;
+	if(EXTI_GetITStatus(EXTI_Line1) != RESET)
+	{
+		if(uAntClockW == 0)
+		{
+			uClockW = 0;
+			uAntClockW = 1;
+		}
+		else
+		{
+			uAntClockW = 0;
+		}
+		EXTI_ClearITPendingBit(EXTI_Line1);
+	}
+}
 
 void EXTI9_5_IRQHandler(void)
 {

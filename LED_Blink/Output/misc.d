@@ -11,5 +11,6 @@
 .\output\misc.o: .\FWlib\inc\stm32f10x_exti.h
 .\output\misc.o: .\FWlib\inc\stm32f10x_gpio.h
 .\output\misc.o: .\FWlib\inc\stm32f10x_rcc.h
+.\output\misc.o: .\FWlib\inc\stm32f10x_tim.h
 .\output\misc.o: .\FWlib\inc\stm32f10x_usart.h
 .\output\misc.o: .\FWlib\inc\misc.h

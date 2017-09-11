@@ -1,6 +1,9 @@
 #include "main.h"
 
 int delay_time = 500;
+float ADC_ConvertedValueLocal = 0;
+u8 uClockW = 0;
+u8 uAntClockW = 0;
 extern uint8_t SendBuff[SENDBUFF_SIZE];
 extern __IO uint16_t ADC_ConvertedValue;
 
@@ -8,7 +11,6 @@ int main(void)
 {
 	u32 c=11;
 	u32 i;
-	float ADC_ConvertedValueLocal;
 	float ResistorVal;
 	LED_GPIO_Config();
 	Key_GPIO_Config();
@@ -17,6 +19,7 @@ int main(void)
 	DMA_Config();
 	ADC1_Volt_Init();
 	SysTick_Init();
+	TIM3_PWM_Init();
 	delay(1);
 	
 	for(i=0; i<SENDBUFF_SIZE; i++)
@@ -27,16 +30,12 @@ int main(void)
 	while(1)
 	{
 		Delay_ms(1000);
+		TIM3_PWM_Init();
 		ADC_ConvertedValueLocal = (float) ADC_ConvertedValue/4096*3.3;
 		ResistorVal = 3.3/ADC_ConvertedValueLocal*10 - 10;
 		printf("Voltage = %f V \r\n", ADC_ConvertedValueLocal);
 		printf("Resistor = %f K \r\n", ResistorVal);
-		if(Key_Scan(GPIOB, GPIO_Pin_0))\
-		{
-			printf("\r\n this is a printf demo \r\n");
-			//USART_SendData(USART1, 'A');
-			//while(USART_GetFlagStatus(USART1, USART_FLAG_TC) != SET);
-			while(1)
+			while(uClockW)
 			{
 				if(c & 0x80)
 				{
@@ -85,20 +84,8 @@ int main(void)
 					LED_OFF(GPIOB, GPIO_Pin_14);
 
 				delay(delay_time);
-				if(Key_Scan(GPIOB, GPIO_Pin_7))
-					break;
-				/*if(Key_Scan(GPIOB, GPIO_Pin_5))
-					delay_time += 100;
-				if(Key_Scan(GPIOB, GPIO_Pin_6))
-				{
-					delay_time -= 100;
-					if(delay_time < 100)
-						delay_time = 100;
-				}*/
 			}
-		}
-		if(Key_Scan(GPIOB, GPIO_Pin_1))
-			while(1)
+			while(uAntClockW)
 			{
 				if(c & 0x01)
 				{
@@ -148,19 +135,8 @@ int main(void)
 					LED_OFF(GPIOB, GPIO_Pin_14);
 				
 				delay(delay_time);
-				if(Key_Scan(GPIOB, GPIO_Pin_7))
-					break;
-				
-				/*if(Key_Scan(GPIOB, GPIO_Pin_5))
-					delay_time += 100;
-				if(Key_Scan(GPIOB, GPIO_Pin_6))
-				{
-					delay_time -= 100;
-					if(delay_time < 100)
-						delay_time = 100;
-				}*/
 			}
-	}
+		}
 }
 
 void delay(int n)

@@ -8,6 +8,7 @@
 #include "dma.h"
 #include "adc_volt.h"
 #include "MySysTick.h"
+#include "pwm_output.h"
 
 void delay(int);
 

@@ -461,6 +461,11 @@
               <FileType>1</FileType>
               <FilePath>.\USER\adc_volt.c</FilePath>
             </File>
+            <File>
+              <FileName>MySysTick.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\USER\MySysTick.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

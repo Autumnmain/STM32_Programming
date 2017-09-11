@@ -20,13 +20,20 @@ K1 ~ k8:
 	Pull down
 	Key -- JP5
 	
-	k5 -- Exti
+	k6 (Exti) -- (-)
+	k7 (Exti) -- (+)
+	
+	k1 (Exti) -- (clockwise)
+	k2 (Exti) -- (anticlockwise)
 	
 
 USART1:
 	PA9 -- USART1_TX
 	PA10-- USART1_RX
+	PA0 -- LED (Red)
 	
-
-Temperatur:
-	Sensor -- P3.7 -- PA15
+ADC:
+	PA1 -- Voltage detection
+	
+PWM:
+	PA6 -- LED (Green), TIM3_CH1

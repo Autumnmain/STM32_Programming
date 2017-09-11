@@ -11,6 +11,7 @@
 .\output\usart1.o: .\FWlib\inc\stm32f10x_exti.h
 .\output\usart1.o: .\FWlib\inc\stm32f10x_gpio.h
 .\output\usart1.o: .\FWlib\inc\stm32f10x_rcc.h
+.\output\usart1.o: .\FWlib\inc\stm32f10x_tim.h
 .\output\usart1.o: .\FWlib\inc\stm32f10x_usart.h
 .\output\usart1.o: .\FWlib\inc\misc.h
 .\output\usart1.o: D:\Program files\KeilV5.20\ARM\ARMCC\Bin\..\include\stdio.h
