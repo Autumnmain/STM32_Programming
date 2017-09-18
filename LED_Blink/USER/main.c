@@ -20,8 +20,9 @@ int main(void)
 	ADC1_Volt_Init();
 	SysTick_Init();
 	TIM3_PWM_Init();
+	//I2C_EE_Init();
 	delay(1);
-	
+	//I2C_Test();
 	for(i=0; i<SENDBUFF_SIZE; i++)
 	{
 		SendBuff[i] = 0xff;

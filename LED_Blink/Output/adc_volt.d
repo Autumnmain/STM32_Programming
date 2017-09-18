@@ -10,6 +10,7 @@
 .\output\adc_volt.o: .\FWlib\inc\stm32f10x_dma.h
 .\output\adc_volt.o: .\FWlib\inc\stm32f10x_exti.h
 .\output\adc_volt.o: .\FWlib\inc\stm32f10x_gpio.h
+.\output\adc_volt.o: .\FWlib\inc\stm32f10x_i2c.h
 .\output\adc_volt.o: .\FWlib\inc\stm32f10x_rcc.h
 .\output\adc_volt.o: .\FWlib\inc\stm32f10x_tim.h
 .\output\adc_volt.o: .\FWlib\inc\stm32f10x_usart.h

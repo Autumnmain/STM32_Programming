@@ -10,6 +10,7 @@
 .\output\usart1.o: .\FWlib\inc\stm32f10x_dma.h
 .\output\usart1.o: .\FWlib\inc\stm32f10x_exti.h
 .\output\usart1.o: .\FWlib\inc\stm32f10x_gpio.h
+.\output\usart1.o: .\FWlib\inc\stm32f10x_i2c.h
 .\output\usart1.o: .\FWlib\inc\stm32f10x_rcc.h
 .\output\usart1.o: .\FWlib\inc\stm32f10x_tim.h
 .\output\usart1.o: .\FWlib\inc\stm32f10x_usart.h

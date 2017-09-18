@@ -10,6 +10,7 @@
 .\output\led.o: .\FWlib\inc\stm32f10x_dma.h
 .\output\led.o: .\FWlib\inc\stm32f10x_exti.h
 .\output\led.o: .\FWlib\inc\stm32f10x_gpio.h
+.\output\led.o: .\FWlib\inc\stm32f10x_i2c.h
 .\output\led.o: .\FWlib\inc\stm32f10x_rcc.h
 .\output\led.o: .\FWlib\inc\stm32f10x_tim.h
 .\output\led.o: .\FWlib\inc\stm32f10x_usart.h
@@ -23,3 +24,4 @@
 .\output\led.o: USER\adc_volt.h
 .\output\led.o: USER\MySysTick.h
 .\output\led.o: USER\pwm_output.h
+.\output\led.o: USER\i2c_ee.h

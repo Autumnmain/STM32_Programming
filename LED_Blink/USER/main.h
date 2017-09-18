@@ -9,6 +9,7 @@
 #include "adc_volt.h"
 #include "MySysTick.h"
 #include "pwm_output.h"
+#include "i2c_ee.h"
 
 void delay(int);
 

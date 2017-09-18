@@ -10,6 +10,7 @@
 .\output\stm32f10x_dbgmcu.o: .\FWlib\inc\stm32f10x_dma.h
 .\output\stm32f10x_dbgmcu.o: .\FWlib\inc\stm32f10x_exti.h
 .\output\stm32f10x_dbgmcu.o: .\FWlib\inc\stm32f10x_gpio.h
+.\output\stm32f10x_dbgmcu.o: .\FWlib\inc\stm32f10x_i2c.h
 .\output\stm32f10x_dbgmcu.o: .\FWlib\inc\stm32f10x_rcc.h
 .\output\stm32f10x_dbgmcu.o: .\FWlib\inc\stm32f10x_tim.h
 .\output\stm32f10x_dbgmcu.o: .\FWlib\inc\stm32f10x_usart.h
